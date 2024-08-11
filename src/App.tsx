@@ -1,8 +1,8 @@
 import React from "react";
-import KanbanTask from "./components/KanbanTask";
+import KanbanColumn from "./components/KanbanColumn";
 
 const App: React.FC = () => {
-  return <KanbanTask />;
+  return <KanbanColumn />;
 };
 
 export default App;
