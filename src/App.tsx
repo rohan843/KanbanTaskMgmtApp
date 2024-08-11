@@ -1,12 +1,8 @@
 import React from "react";
-import { ThemeProvider } from "./context/ThemeContext";
+import KanbanTask from "./components/KanbanTask";
 
 const App: React.FC = () => {
-  return (
-    <ThemeProvider>
-      <div className="text-red-500">Hello</div>
-    </ThemeProvider>
-  );
+  return <KanbanTask />;
 };
 
 export default App;
