@@ -17,7 +17,7 @@ const KanbanTask: React.FC = () => {
   return (
     <div
       className={classNames(
-        "w-[280px] min-h-[88px] rounded-[8px] px-[16px] py-[23px] kanban-task-card",
+        "w-[280px] min-h-[88px] rounded-[8px] px-[16px] py-[23px] mb-[20px] kanban-task-card",
         {
           "kanban-task-card-light": !darkTheme,
           "kanban-task-card-dark": darkTheme,
