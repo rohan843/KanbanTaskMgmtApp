@@ -14,7 +14,157 @@ interface KanbanProviderProps {
   children: ReactNode;
 }
 
-const initialBoardsData: BoardsData = {};
+// TODO: Load info from backend here when website first opens.
+const initialBoardsData: BoardsData = {
+  "Platform Launch": [
+    {
+      name: "TODO",
+      tasks: [
+        {
+          taskId: "a",
+          taskTitle: "Build UI for onboarding flow",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: false,
+              title: "qwerty",
+            },
+            {
+              checked: false,
+              title: "qwerty",
+            },
+            {
+              checked: false,
+              title: "qwerty",
+            },
+            {
+              checked: false,
+              title: "qwerty",
+            },
+            {
+              checked: false,
+              title: "qwerty",
+            },
+            {
+              checked: false,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "b",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: false,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "c",
+          taskTitle: "Build settings UI",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: false,
+              title: "qwerty",
+            },
+            {
+              checked: false,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "d",
+          taskTitle: "QA and test all major user journeys",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: false,
+              title: "qwerty",
+            },
+            {
+              checked: false,
+              title: "qwerty",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "DOING",
+      tasks: [
+        {
+          taskId: "e",
+          taskTitle: "Build UI for onboarding flow",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: false,
+              title: "qwerty",
+            },
+            {
+              checked: false,
+              title: "qwerty",
+            },
+            {
+              checked: false,
+              title: "qwerty",
+            },
+            {
+              checked: false,
+              title: "qwerty",
+            },
+            {
+              checked: false,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "f",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: false,
+              title: "qwerty",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "DONE",
+      tasks: [
+        {
+          taskId: "g",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+      ],
+    },
+  ],
+  "Marketing Plan": [],
+  Roadmap: [],
+};
 
 const KanbanProvider: React.FC<KanbanProviderProps> = ({ children }) => {
   const [boardsData, setBoardsData] = useState<BoardsData>(initialBoardsData);
