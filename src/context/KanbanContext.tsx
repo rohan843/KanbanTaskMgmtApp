@@ -171,7 +171,7 @@ const KanbanProvider: React.FC<KanbanProviderProps> = ({ children }) => {
   const updateBoardsDataTo = (newBoardsData: BoardsData) => {
     setBoardsData(newBoardsData);
   };
-  const [activeBoard, setActiveBoard] = useState<BoardName | null>(null);
+  const [activeBoard, setActiveBoard] = useState<BoardName | null>("Platform Launch");
   const setActiveBoardTo = (newBoard: BoardName) => {
     setActiveBoard(newBoard);
   };
