@@ -1,17 +1,23 @@
 import classNames from "classnames";
 import React from "react";
 import useThemeProvider from "../../hooks/useThemeProvider";
-// import { taskId } from "../types";
+import { TaskId } from "../../types";
 
-// type Props = {
-//   taskId: taskId;
-// };
+type Props = {
+  taskId: TaskId;
+  taskTitle: string;
+  totalSubtaskCount: number;
+  finishedSubtaskCount: number;
+  onClick: (e: React.MouseEvent) => void;
+};
 
-const KanbanTask: React.FC = () => {
-  const taskName = "Task Name";
-  const totalSubtaskCount = 2;
-  const finishedSubtaskCount = 0;
-
+const KanbanTask: React.FC<Props> = ({
+  taskId,
+  taskTitle,
+  totalSubtaskCount,
+  finishedSubtaskCount,
+  onClick,
+}) => {
   const { darkTheme } = useThemeProvider();
 
   return (
@@ -23,7 +29,11 @@ const KanbanTask: React.FC = () => {
           "kanban-task-card-dark": darkTheme,
         }
       )}
-      title={taskName}
+      title={taskTitle}
+      key={taskId}
+      onClick={(e) => {
+        onClick(e);
+      }}
     >
       <h1
         className={classNames("kanban-task-card-title", {
@@ -31,7 +41,7 @@ const KanbanTask: React.FC = () => {
           "kanban-task-card-title-dark": darkTheme,
         })}
       >
-        {taskName}
+        {taskTitle}
       </h1>
       <p
         className={classNames("mt-1 kanban-task-card-status", {
