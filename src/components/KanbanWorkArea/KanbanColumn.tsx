@@ -1,16 +1,35 @@
 import React from "react";
 import KanbanTask from "./KanbanTask";
 import classNames from "classnames";
+import { SingleColumnData } from "../../types";
 
 const colHandleColorClasses = ["blue-bg", "purple-bg", "green-bg"];
 
-const KanbanColumn: React.FC = () => {
-  const columnName = "TODO";
-  const taskCount = 4;
+type Props = {
+  columnIndex: number;
+  columnData: SingleColumnData;
+};
 
-  const columnIndex = 0;
+const KanbanColumn: React.FC<Props> = ({ columnIndex, columnData }) => {
+  const columnName = columnData.name;
+  const taskCount = columnData.tasks.length;
+
   const colHandleColorClass =
     colHandleColorClasses[columnIndex % colHandleColorClasses.length];
+
+  const innerTasks = columnData.tasks.map((taskData) => {
+    return (
+      <KanbanTask
+        taskId={taskData.taskId}
+        taskTitle={taskData.taskTitle}
+        finishedSubtaskCount={
+          taskData.subtasksArray.filter((subtask) => subtask.checked).length
+        }
+        totalSubtaskCount={taskData.subtasksArray.length}
+        onClick={() => {}}
+      />
+    );
+  });
 
   return (
     <div className="w-[304px] pl-[24px] mt-[24px]">
@@ -25,13 +44,7 @@ const KanbanColumn: React.FC = () => {
           {columnName} ({taskCount})
         </p>
       </div>
-      <div className="w-full flex flex-col">
-        <KanbanTask />
-        <KanbanTask />
-        <KanbanTask />
-        <KanbanTask />
-        <KanbanTask />
-      </div>
+      <div className="w-full flex flex-col">{innerTasks}</div>
     </div>
   );
 };
