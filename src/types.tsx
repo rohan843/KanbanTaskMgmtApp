@@ -2,7 +2,7 @@
 export type BoardName = string; // Name of board is unique
 
 // Tasks
-export type TaskId = number; // Id of task is unique
+export type TaskId = string; // Id of task is unique
 export type SingleTaskData = {
   taskId: TaskId;
   taskTitle: string;
