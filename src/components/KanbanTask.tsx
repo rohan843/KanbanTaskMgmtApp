@@ -7,9 +7,9 @@ import React from "react";
 
 const KanbanTask: React.FC = () => {
   return (
-    <div>
-      <h1>Task Name</h1>
-      <p>0 of 2 subtasks</p>
+    <div className="w-[280px] min-h-[88px] rounded-[8px] px-[16px] py-[23px] kanban-task-card">
+      <h1 className="kanban-task-card-title-light">Task Name</h1>
+      <p className="kanban-task-card-status-light">0 of 2 subtasks</p>
     </div>
   );
 };
