@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import React from "react";
-import useThemeProvider from "../hooks/useThemeProvider";
+import useThemeProvider from "../../hooks/useThemeProvider";
 // import { taskId } from "../types";
 
 // type Props = {
