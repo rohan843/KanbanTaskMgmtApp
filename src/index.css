@@ -7,23 +7,46 @@
 :root {
     --black: #000112;
     --medium-grey: #828FA3;
+    --white: #ffffff;
+    --dark-grey: #2B2C37;
 }
 
 .kanban-task-card {
     -webkit-box-shadow: 0px 4px 6px 0px rgba(54, 78, 126, 0.1015);
-    box-shadow: 0px 4px 6px 0px rgba(54, 78, 126, 0.1015);
+    box-shadow: 0px 4px 6px 0px rgba(54, 78, 126, 0.102);
+    cursor: pointer;
+    user-select: none;
 }
 
-.kanban-task-card-title-light {
+.kanban-task-card-light {
+    background-color: var(--white);
+}
+
+.kanban-task-card-dark {
+    background-color: var(--dark-grey);
+}
+
+.kanban-task-card-title {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 700;
     font-size: 15px;
+}
+
+.kanban-task-card-title-light {
     color: var(--black);
 }
 
-.kanban-task-card-status-light {
+.kanban-task-card-title-dark {
+    color: var(--white);
+}
+
+.kanban-task-card-status {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 700;
     font-size: 12px;
     color: var(--medium-grey);
 }
+
+/* .kanban-task-card-status-light {} */
+
+/* .kanban-task-card-status-dark {} */
