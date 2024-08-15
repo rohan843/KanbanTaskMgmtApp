@@ -33,7 +33,7 @@ const KanbanColumn: React.FC<Props> = ({ columnIndex, columnData }) => {
   });
 
   return (
-    <div className="w-[304px] pl-[24px] mt-[24px]">
+    <div className="w-[304px] pl-[24px] mt-[24px] h-max">
       <div className="mb-[24px] w-full flex flex-row items-center">
         <div
           className={classNames(
