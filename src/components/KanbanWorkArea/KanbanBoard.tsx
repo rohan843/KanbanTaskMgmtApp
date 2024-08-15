@@ -37,6 +37,7 @@ const AddColumnButton: React.FC<{ onClick: (e: React.MouseEvent) => void }> = ({
 
 type Props = { boardData: SingleBoardData; activeBoard: BoardName };
 
+// TODO: Implement drag based and swipe based scroll.
 const KanbanBoard: React.FC<Props> = ({ boardData, activeBoard }) => {
   const columnsArrayRender = boardData.map((colData, index) => {
     return (
