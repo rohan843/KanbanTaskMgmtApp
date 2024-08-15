@@ -251,6 +251,226 @@ const initialBoardsData: BoardsData = {
         },
       ],
     },
+    {
+      name: "DONE - 1",
+      tasks: [
+        {
+          taskId: "gq",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "hq",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "g1q",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "g2q",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "g3q",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "g4q",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "g5q",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "DONE - 2",
+      tasks: [
+        {
+          taskId: "gqz",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "hqz",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "g1qz",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "g2qz",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "g3qz",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "g4qz",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "g5qz",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+      ],
+    },
   ],
   "Marketing Plan": [],
   Roadmap: [],
