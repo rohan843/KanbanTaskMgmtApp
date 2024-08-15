@@ -159,6 +159,96 @@ const initialBoardsData: BoardsData = {
             },
           ],
         },
+        {
+          taskId: "h",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "g1",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "g2",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "g3",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "g4",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
+        {
+          taskId: "g5",
+          taskTitle: "Build UI for search",
+          taskDescription: "",
+          subtasksArray: [
+            {
+              checked: true,
+              title: "qwerty",
+            },
+            {
+              checked: true,
+              title: "qwerty",
+            },
+          ],
+        },
       ],
     },
   ],
