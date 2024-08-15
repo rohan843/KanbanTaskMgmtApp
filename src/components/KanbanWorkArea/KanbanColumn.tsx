@@ -21,6 +21,7 @@ const KanbanColumn: React.FC<Props> = ({ columnIndex, columnData }) => {
     return (
       <KanbanTask
         taskId={taskData.taskId}
+        key={taskData.taskId}
         taskTitle={taskData.taskTitle}
         finishedSubtaskCount={
           taskData.subtasksArray.filter((subtask) => subtask.checked).length

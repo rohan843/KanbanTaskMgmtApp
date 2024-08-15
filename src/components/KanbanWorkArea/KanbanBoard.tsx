@@ -7,7 +7,13 @@ type Props = { boardData: SingleBoardData };
 
 const KanbanBoard: React.FC<Props> = ({ boardData }) => {
   const columnsArrayRender = boardData.map((colData, index) => {
-    return <KanbanColumn columnIndex={index} columnData={colData} />;
+    return (
+      <KanbanColumn
+        columnIndex={index}
+        columnData={colData}
+        key={colData.name}
+      />
+    );
   });
   return (
     <KanbanWorkAreaBackground className="flex flex-row overflow-auto">
