@@ -89,3 +89,13 @@ body {
 .green-bg {
     background-color: #67E2AE;
 }
+
+.kanban-work-area-background {}
+
+.kanban-work-area-background-light {
+    background-color: var(--light-grey-light-bg);
+}
+
+.kanban-work-area-background-dark {
+    background-color: var(--very-dark-grey-dark-bg);
+}
