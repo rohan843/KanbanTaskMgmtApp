@@ -110,9 +110,9 @@ body {
 }
 
 .add-column-light button {
-    background-color: #e9effa;
+    background: var(--linear-light);
 }
 
 .add-column-dark button {
-    background-color: var(--linear-dark);
+    background: var(--linear-dark);
 }
