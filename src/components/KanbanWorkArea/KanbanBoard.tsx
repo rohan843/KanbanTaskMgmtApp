@@ -12,7 +12,7 @@ const AddColumnButton: React.FC<{ onClick: (e: React.MouseEvent) => void }> = ({
   return (
     <div
       className={classNames(
-        "w-[328px] pl-[24px] mt-[24px] pr-[24px] flex flex-col h-[87vh] add-column",
+        "w-[304px] pl-[24px] mt-[24px] flex flex-col h-[87vh] add-column",
         {
           "add-column-dark": darkTheme,
           "add-column-light": !darkTheme,
@@ -50,7 +50,7 @@ const KanbanBoard: React.FC<Props> = ({ boardData, activeBoard }) => {
   return (
     <KanbanWorkAreaBackground
       classNameOuter="overflow-auto"
-      classNameInner="flex flex-row pr-[24px] pb-[24px]"
+      classNameInner="flex flex-row pr-[24px] pb-[24px] w-max h-max"
     >
       {[
         columnsArrayRender,
