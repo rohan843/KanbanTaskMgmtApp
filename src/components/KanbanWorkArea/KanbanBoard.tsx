@@ -1,11 +1,19 @@
 import React from "react";
-import { BoardName } from "../../types";
+import { SingleBoardData } from "../../types";
+import KanbanWorkAreaBackground from "./KanbanWorkAreaBackground";
+import KanbanColumn from "./KanbanColumn";
 
-type Props = { activeBoard: BoardName };
+type Props = { boardData: SingleBoardData };
 
-const KanbanBoard: React.FC<Props> = ({ activeBoard }) => {
-  console.log(activeBoard);
-  return <div className="w-full h-full bg-red-300"></div>;
+const KanbanBoard: React.FC<Props> = ({ boardData }) => {
+  const columnsArrayRender = boardData.map((colData, index) => {
+    return <KanbanColumn columnIndex={index} columnData={colData} />;
+  });
+  return (
+    <KanbanWorkAreaBackground className="flex flex-row overflow-auto">
+      {columnsArrayRender}
+    </KanbanWorkAreaBackground>
+  );
 };
 
 export default KanbanBoard;

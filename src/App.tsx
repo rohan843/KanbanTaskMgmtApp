@@ -3,10 +3,10 @@ import useKanbanProvider from "./hooks/useKanbanProvider";
 import KanbanBoard from "./components/KanbanWorkArea/KanbanBoard";
 
 const App: React.FC = () => {
-  const { activeBoard } = useKanbanProvider();
+  const { activeBoard, boardsData } = useKanbanProvider();
   return (
     <div className="w-full h-full">
-      {activeBoard && <KanbanBoard activeBoard={activeBoard} />}
+      {activeBoard && <KanbanBoard boardData={boardsData[activeBoard]} />}
     </div>
   );
 };
