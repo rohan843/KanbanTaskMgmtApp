@@ -1,11 +1,43 @@
 import React from "react";
-import { SingleBoardData } from "../../types";
+import { BoardName, SingleBoardData } from "../../types";
 import KanbanWorkAreaBackground from "./KanbanWorkAreaBackground";
 import KanbanColumn from "./KanbanColumn";
+import classNames from "classnames";
+import useThemeProvider from "../../hooks/useThemeProvider";
 
-type Props = { boardData: SingleBoardData };
+const AddColumnButton: React.FC<{ onClick: (e: React.MouseEvent) => void }> = ({
+  onClick,
+}) => {
+  const { darkTheme } = useThemeProvider();
+  return (
+    <div
+      className={classNames(
+        "w-[304px] pl-[24px] mt-[24px] flex flex-col h-[89%] add-column",
+        {
+          "add-column-dark": darkTheme,
+          "add-column-light": !darkTheme,
+        }
+      )}
+    >
+      <div className="mb-[24px] w-full flex flex-row items-center opacity-0">
+        <div
+          className={classNames("h-[15px] w-[15px] rounded-full mr-[12px]")}
+        />
+        <p className="kanban-column-header uppercase select-none"> </p>
+      </div>
+      <button
+        className="w-full flex flex-col grow justify-center items-center rounded-[6px]"
+        onClick={(e) => onClick(e)}
+      >
+        <p>+ New Column</p>
+      </button>
+    </div>
+  );
+};
 
-const KanbanBoard: React.FC<Props> = ({ boardData }) => {
+type Props = { boardData: SingleBoardData; activeBoard: BoardName };
+
+const KanbanBoard: React.FC<Props> = ({ boardData, activeBoard }) => {
   const columnsArrayRender = boardData.map((colData, index) => {
     return (
       <KanbanColumn
@@ -16,8 +48,14 @@ const KanbanBoard: React.FC<Props> = ({ boardData }) => {
     );
   });
   return (
-    <KanbanWorkAreaBackground className="flex flex-row overflow-auto pr-[24px]">
-      {columnsArrayRender}
+    <KanbanWorkAreaBackground className="flex flex-row overflow-auto pr-[24px] pb-[24px]">
+      {[
+        columnsArrayRender,
+        <AddColumnButton
+          key={`new-col-for-${activeBoard}-$&#`}
+          onClick={() => {}}
+        />,
+      ]}
     </KanbanWorkAreaBackground>
   );
 };

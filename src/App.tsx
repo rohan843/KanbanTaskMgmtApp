@@ -6,7 +6,12 @@ const App: React.FC = () => {
   const { activeBoard, boardsData } = useKanbanProvider();
   return (
     <div className="w-full h-full">
-      {activeBoard && <KanbanBoard boardData={boardsData[activeBoard]} />}
+      {activeBoard && (
+        <KanbanBoard
+          activeBoard={activeBoard}
+          boardData={boardsData[activeBoard]}
+        />
+      )}
     </div>
   );
 };

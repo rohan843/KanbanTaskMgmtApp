@@ -11,6 +11,8 @@
     --dark-grey: #2B2C37;
     --light-grey-light-bg: #F4F7FD;
     --very-dark-grey-dark-bg: #20212C;
+    --linear-light: linear-gradient(180deg, #e9effa 0%, #e9effa80 100%);
+    --linear-dark: linear-gradient(180deg, #2B2C37 0%, #2B2C3780 100%);
 }
 
 html {
@@ -92,12 +94,25 @@ body {
     background-color: #67E2AE;
 }
 
-.kanban-work-area-background {}
-
 .kanban-work-area-background-light {
     background-color: var(--light-grey-light-bg);
 }
 
 .kanban-work-area-background-dark {
     background-color: var(--very-dark-grey-dark-bg);
+}
+
+.add-column p {
+    color: var(--medium-grey);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.add-column-light button {
+    background-color: #e9effa;
+}
+
+.add-column-dark button {
+    background-color: var(--linear-dark);
 }
