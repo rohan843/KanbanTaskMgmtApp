@@ -4,10 +4,15 @@ import classNames from "classnames";
 
 type Props = {
   children?: ReactNode;
-  className?: string;
+  classNameInner?: string;
+  classNameOuter?: string;
 };
 
-const KanbanWorkAreaBackground: React.FC<Props> = ({ children, className }) => {
+const KanbanWorkAreaBackground: React.FC<Props> = ({
+  children,
+  classNameInner,
+  classNameOuter,
+}) => {
   const { darkTheme } = useThemeProvider();
   return (
     <div
@@ -17,10 +22,10 @@ const KanbanWorkAreaBackground: React.FC<Props> = ({ children, className }) => {
           "kanban-work-area-background-dark": darkTheme,
           "kanban-work-area-background-light": !darkTheme,
         },
-        className
+        classNameOuter
       )}
     >
-      {children}
+      <div className={classNameInner}>{children}</div>
     </div>
   );
 };
