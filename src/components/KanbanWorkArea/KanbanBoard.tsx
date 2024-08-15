@@ -16,7 +16,7 @@ const KanbanBoard: React.FC<Props> = ({ boardData }) => {
     );
   });
   return (
-    <KanbanWorkAreaBackground className="flex flex-row overflow-auto">
+    <KanbanWorkAreaBackground className="flex flex-row overflow-auto pr-[24px]">
       {columnsArrayRender}
     </KanbanWorkAreaBackground>
   );
