@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode } from "react";
+import React, { createContext, ReactNode, useState } from "react";
 
 interface LayoutContextType {
   layout: "mobile" | "tablet" | "desktop";
@@ -23,7 +23,13 @@ function getLayout() {
 }
 
 const LayoutProvider: React.FC<LayoutProviderProps> = ({ children }) => {
-  const layout = getLayout();
+  const [layout, setLayout] = useState<"mobile" | "tablet" | "desktop">(
+    getLayout()
+  );
+
+  window.addEventListener("resize", () => {
+    setLayout(getLayout);
+  });
 
   return (
     <LayoutContext.Provider value={{ layout }}>
