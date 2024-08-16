@@ -1,8 +1,12 @@
 import React from "react";
-import useLayoutProvider from "./hooks/useLayoutProvider";
+import TopBar from "./components/TopBar";
 
 const App: React.FC = () => {
-  return <div className="w-full h-full">{useLayoutProvider().layout}</div>;
+  return (
+    <div className="w-full h-full">
+      <TopBar />
+    </div>
+  );
 };
 
 export default App;

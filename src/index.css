@@ -13,6 +13,7 @@
     --very-dark-grey-dark-bg: #20212C;
     --linear-light: linear-gradient(180deg, #e9effa 0%, #e9effa80 100%);
     --linear-dark: linear-gradient(180deg, #2B2C37 0%, #2B2C3780 100%);
+    --lines-light: #E4EBFA;
 }
 
 html {
@@ -131,4 +132,28 @@ body {
 
 .add-column-dark button {
     background: var(--linear-dark);
+}
+
+.top-bar {
+    background-color: var(--white);
+    /* border-bottom: 1px solid var(--lines-light); */
+}
+
+.top-bar p {
+    color: var(--black);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.bottom-border {
+    border-bottom: 1px solid var(--lines-light);
+}
+
+.right-border {
+    border-right: 1px solid var(--lines-light);
+}
+
+.menu-dots-bg {
+    background-color: var(--medium-grey);
 }
