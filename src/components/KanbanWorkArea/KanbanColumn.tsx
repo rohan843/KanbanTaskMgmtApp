@@ -37,11 +37,11 @@ const KanbanColumn: React.FC<Props> = ({ columnIndex, columnData }) => {
       <div className="mb-[24px] w-full flex flex-row items-center">
         <div
           className={classNames(
-            "h-[15px] w-[15px] rounded-full bg-black mr-[12px]",
+            "h-[15px] w-[15px] rounded-full bg-black mr-[12px] cursor-default",
             colHandleColorClass
           )}
         />
-        <p className="kanban-column-header uppercase">
+        <p className="kanban-column-header uppercase cursor-text">
           {columnName} ({taskCount})
         </p>
       </div>
